@@ -4,7 +4,7 @@ despace: main.cpp
 install: despace
 	cp despace /usr/local/bin/
 uinstall:
-	rm -f /usr/local/despace
+	rm -f /usr/local/bin/despace
 clean:
 	rm -f despace
 
