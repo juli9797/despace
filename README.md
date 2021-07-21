@@ -6,8 +6,7 @@ This tool removes them.
 
 ## Requirements
 
-* Linux (MacOs should work as well)
-* g++
+* g++ with C++20 support
 * make
 
 ## Installation
@@ -35,7 +34,13 @@ $ make install
 Just supply a list of files to *DESPACE*:
 
 ```
+$ ls
+filewithoutspace.exe  'file with space. exe'   folderwithoutspace  'folder with space'
 $ despace *
-#or
-$ despace 'File to despace . h t m l'
+filewithoutspace.exe	->	[nothing to do...]
+'file with space. exe'	->	filewithspace.exe
+folderwithoutspace	->	[nothing to do...]
+'folder with space'	->	folderwithspace
+$ ls
+filewithoutspace.exe  filewithspace.exe  folderwithoutspace  folderwithspace
 ```
