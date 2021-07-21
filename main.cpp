@@ -1,6 +1,9 @@
 #include <algorithm>
 #include <iostream>
 #include <string>
+#include <filesystem>
+
+
 int main(int argc, char* argv[])
 {
 
@@ -21,8 +24,12 @@ int main(int argc, char* argv[])
                       << "\033[1;33m"
                       << "\t->\t"
                       << "\033[0m" << dest << std::endl;
-            std::string command = "mv '" + src + "' " + dest;
-            std::system(command.c_str());
+            //std::string command = "mv '" + src + "' " + dest;
+            //std::system(command.c_str());
+
+            std::filesystem::path p_src = std::filesystem::current_path() / src;
+            std::filesystem::path p_dest = std::filesystem::current_path() / dest;
+            std::filesystem::rename(src,dest); 
         }
     }
 }

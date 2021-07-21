@@ -30,4 +30,5 @@
 *.exe
 *.out
 *.app
-despace
+/despace
+/compile_commands.json
