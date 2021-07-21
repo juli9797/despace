@@ -33,7 +33,7 @@ $ make install
 
 Just supply a list of files to *DESPACE*:
 
-```bash
+```console
 $ ls
 filewithoutspace.exe  'file with space. exe'   folderwithoutspace  'folder with space'
 $ despace *
